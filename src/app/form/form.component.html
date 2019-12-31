@@ -1,0 +1,19 @@
+<form #f="ngForm" (ngSubmit)="sendForm(f.valid)">
+
+<input required type="text"  #user="ngModel" name="user" minlength="4" [(ngModel)]="user.username">
+
+<input required type="text" name="psw" #pass="ngModel"  [(ngModel)]="user.password">
+
+
+<button [disabled]="!f.valid"> Send </button>
+
+ <h4 *ngIf="!f.valid && f.dirty  "> יש למלא את כל השדות</h4>
+<h4 *ngIf="!user.valid && user.dirty"> שם המשתמש קצר  מידי </h4>
+ <h4 *ngIf="user.dirty ">  חובה למלא שם משתמש </h4>
+
+ <h4 *ngIf="f.valid"> הטופס תקין</h4>
+</form>
+
+
+
+

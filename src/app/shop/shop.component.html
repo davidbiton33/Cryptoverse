@@ -1,0 +1,7 @@
+<div *ngFor="let p of products">
+<h2>   {{p.name}}
+{{p.price}} </h2>
+</div>
+
+<button (click)="sortMinToMax()"> sortMinToMax </button> 
+<button (click)="sortMaxToMin()"> sortMaxToMin </button> 
